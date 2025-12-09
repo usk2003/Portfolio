@@ -49,7 +49,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
+      className="flex flex-col items-center justify-center py-24 px-[6vw] md:px-[8vw] lg:px-[10vw]"
     >
       {/* Toast Container */}
       <ToastContainer />
@@ -66,7 +66,7 @@ const Contact = () => {
       {/* Contact Form */}
       <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
         <h3 className="text-xl font-semibold text-white text-center">
-          Connect With Me <span className="ml-1">🚀</span>
+          Connect With Me <span className="ml-1"></span>
         </h3>
 
         <form ref={form} onSubmit={sendEmail} className="mt-4 flex flex-col space-y-4">

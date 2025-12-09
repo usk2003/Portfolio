@@ -1,84 +1,82 @@
 import React from "react";
-import { experiences } from "../../constants"; // Import your data
 
-const Experience = () => {
+// import logos
+import siLogo from "../../assets/responsibility_logo/smartinterviews.png";
+import nssLogo from "../../assets/responsibility_logo/nss.png";
+import smLogo from "../../assets/responsibility_logo/socialmedia.png";
+
+const responsibilities = [
+  {
+    id: 1,
+    role: "DSA Mentor",
+    organization: "Smart Interviews",
+    date: "Jan 2025 – Jul 2025",
+    desc: "Mentored 300+ students in Data Structures and Algorithms, provided structured guidance, improved their problem-solving skills, and helped them strengthen recursion, DP, and graph concepts.",
+    skills: ["DSA", "Mentoring", "Problem Solving", "Competitive Programming"],
+    logo: siLogo
+  },
+  {
+    id: 2,
+    role: "Organizing Team Member",
+    organization: "NSS VNRVJIET",
+    date: "2024 – Present",
+    desc: "Led 5+ social initiatives including Blood Donation Camp, Village Camp, Clay Ganesha, and Fist Full of Rice while managing large-scale event execution and coordination.",
+    skills: ["Leadership", "Teamwork", "Event Management"],
+    logo: nssLogo
+  },
+  {
+    id: 3,
+    role: "Head Design Coordinator",
+    organization: "Social Media Club, VNRVJIET",
+    date: "2024 – Present",
+    desc: "Designed 25+ high-engagement posts (50K+ reach) for college events including Graduation Day and Sintillashunz, handled branding and digital content strategy.",
+    skills: ["Design", "Branding", "Canva", "Creativity"],
+    logo: smLogo
+  },
+];
+
+const PositionOfResponsibility = () => {
   return (
     <section
-      id="experience"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
+      id="responsibility"
+      className="py-24 px-[5vw] md:px-[8vw] lg:px-[10vw] font-sans"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">EXPERIENCE</h2>
+        <h2 className="text-4xl font-bold text-white">POSITION OF RESPONSIBILITY</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
-          A collection of my work experience and the roles I have taken in
-          various organizations
+          Roles where I contributed, led teams, and handled responsibilities.
         </p>
       </div>
 
-      {/* Experience Timeline */}
-      <div className="relative">
-        {/* Vertical line */}
-        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full"></div>
-
-        {/* Experience Entries */}
-        {experiences.map((experience, index) => (
+      {/* RESPONSIBILITY CARDS */}
+      <div className="space-y-10">
+        {responsibilities.map((item) => (
           <div
-            key={experience.id}
-            className={`flex flex-col sm:flex-row items-center mb-16 ${
-              index % 2 === 0 ? "sm:justify-end" : "sm:justify-start"
-            }`}
+            key={item.id}
+            className="p-8 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transition-transform duration-300 hover:scale-105"
           >
-            {/* Timeline Circle */}
-            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
-              <img
-                src={experience.img}
-                alt={experience.company}
-                className="w-full h-full object-cover rounded-full"
-              />
-            </div>
+            <div className="flex flex-col md:flex-row justify-between items-start">
+            {/* LEFT SIDE CONTENT */}
+            <div className="md:w-3/4">
+              <h3 className="text-2xl font-semibold text-white">{item.role}</h3>
+              <h4 className="text-md text-gray-300">{item.organization}</h4>
 
-            {/* Content Section */}
-            <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
-                index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
-              } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
-            >
-              {/* Flex container for image and text */}
-              <div className="flex items-center space-x-6">
-                {/* Company Logo/Image */}
-                <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
-                  <img
-                    src={experience.img}
-                    alt={experience.company}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              {/* DATE BELOW POSITION (LIKE YOU WANT) */}
+              <p className="text-sm text-gray-400 mt-1">{item.date}</p>
 
-                {/* Role, Company Name, and Date */}
-                <div className="flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-semibold text-white">
-                      {experience.role}
-                    </h3>
-                    <h4 className="text-md sm:text-sm text-gray-300">
-                      {experience.company}
-                    </h4>
-                  </div>
-                  {/* Date at the bottom */}
-                  <p className="text-sm text-gray-500 mt-2">{experience.date}</p>
-                </div>
-              </div>
+              {/* Description */}
+              <p className="mt-4 text-gray-400">{item.desc}</p>
 
-              <p className="mt-4 text-gray-400">{experience.desc}</p>
+              {/* Skills */}
               <div className="mt-4">
                 <h5 className="font-medium text-white">Skills:</h5>
                 <ul className="flex flex-wrap mt-2">
-                  {experience.skills.map((skill, index) => (
+                  {item.skills.map((skill, index) => (
                     <li
                       key={index}
-                      className="bg-[#8245ec] text-gray-300 px-4 py-1 text-xs sm:text-sm rounded-lg mr-2 mb-2 border border-gray-400"
+                      className="bg-[#8245ec] text-gray-200 px-4 py-1 text-xs sm:text-sm rounded-lg mr-2 mb-2 border border-gray-400"
                     >
                       {skill}
                     </li>
@@ -86,6 +84,18 @@ const Experience = () => {
                 </ul>
               </div>
             </div>
+
+            {/* RIGHT SIDE LOGO — MATCH EDUCATION STYLE */}
+            <div className="flex-shrink-0">
+              <img
+                src={item.logo}
+                alt={item.organization}
+                className="rounded-lg object-cover max-h-28 md:max-h-36 lg:max-h-40"
+              />
+            </div>
+
+          </div>
+
           </div>
         ))}
       </div>
@@ -93,4 +103,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default PositionOfResponsibility;

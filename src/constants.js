@@ -1,84 +1,73 @@
-// Skills Section Logo's
+// -------------------------------
+// Skills Section Logos
+// -------------------------------
 import htmlLogo from './assets/tech_logo/html.png';
 import cssLogo from './assets/tech_logo/css.png';
-import sassLogo from './assets/tech_logo/sass.png';
 import javascriptLogo from './assets/tech_logo/javascript.png';
 import reactjsLogo from './assets/tech_logo/reactjs.png';
-import angularLogo from './assets/tech_logo/angular.png';
-import reduxLogo from './assets/tech_logo/redux.png';
-import nextjsLogo from './assets/tech_logo/nextjs.png';
 import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
-import gsapLogo from './assets/tech_logo/gsap.png';
-import materialuiLogo from './assets/tech_logo/materialui.png';
-import bootstrapLogo from './assets/tech_logo/bootstrap.png';
-import springbootLogo from './assets/tech_logo/springboot.png';
 import nodejsLogo from './assets/tech_logo/nodejs.png';
 import expressjsLogo from './assets/tech_logo/express.png';
 import mysqlLogo from './assets/tech_logo/mysql.png';
 import mongodbLogo from './assets/tech_logo/mongodb.png';
 import firebaseLogo from './assets/tech_logo/firebase.png';
-import cLogo from './assets/tech_logo/c.png';
+import pythonLogo from './assets/tech_logo/python.png';
 import cppLogo from './assets/tech_logo/cpp.png';
 import javaLogo from './assets/tech_logo/java.png';
-import pythonLogo from './assets/tech_logo/python.png';
-import typescriptLogo from './assets/tech_logo/typescript.png';
+import cLogo from './assets/tech_logo/c.png';
+import csharpLogo from './assets/tech_logo/csharp.png';
+import postgreLogo from './assets/tech_logo/postgre.png';
 import gitLogo from './assets/tech_logo/git.png';
 import githubLogo from './assets/tech_logo/github.png';
 import vscodeLogo from './assets/tech_logo/vscode.png';
 import postmanLogo from './assets/tech_logo/postman.png';
-import mcLogo from './assets/tech_logo/mc.png';
 import figmaLogo from './assets/tech_logo/figma.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
-import postgreLogo from './assets/tech_logo/postgre.png';
-import csharpLogo from './assets/tech_logo/csharp.png';
 
-// Experience Section Logo's
-import webverseLogo from './assets/company_logo/webverse_logo.png';
-import agcLogo from './assets/company_logo/agc_logo.png';
-import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
+// ------------------------------------
+// Education Logos
+// ------------------------------------
+import vnrLogo from './assets/education_logo/vnr.png';
+import nanoLogo from './assets/education_logo/nano.png';
+import gowthamLogo from './assets/education_logo/gowtham.png';
 
-// Education Section Logo's
-import glaLogo from './assets/education_logo/gla_logo.png';
-import bsaLogo from './assets/education_logo/bsa_logo.png';
-import vpsLogo from './assets/education_logo/vps_logo.png';
-
-// Project Section Logo's
-import githubdetLogo from './assets/work_logo/github_det.png';
-import csprepLogo from './assets/work_logo/cs_prep.png';
-import movierecLogo from './assets/work_logo/movie_rec.png';
-import taskremLogo from './assets/work_logo/task_rem.png';
-import npmLogo from './assets/work_logo/npm.png';
-import webverLogo from './assets/work_logo/web_dig.png';
-import cmLogo from './assets/work_logo/cm.png';
-import imagesearchLogo from './assets/work_logo/image_search.png';
-import removebgLogo from './assets/work_logo/remove_bg.png';
-
-
+// ------------------------------------
+// Project Logos (MAKE SURE THESE FILES EXIST)
+// ------------------------------------
+import stocktraqLogo from "./assets/work_logo/stocktraq.png";
+import vectorjcLogo from "./assets/work_logo/vectorjc.png";
+import travelLogo from "./assets/work_logo/travel.png";
+import askmypaperLogo from "./assets/work_logo/askmypaper.png";
+import chatappLogo from "./assets/work_logo/chatapp.png";
+import virtualmouseLogo from "./assets/work_logo/virtualmouse.png";
+import journeyLogo from "./assets/work_logo/journey.png";
+import videogamesLogo from "./assets/work_logo/videogames.png";
+import incomeLogo from "./assets/work_logo/income.png";
+import weatherLogo from "./assets/work_logo/weather.png";
+import flightdelayLogo from "./assets/work_logo/flightdelay.png";
+import suffixtreeLogo from "./assets/work_logo/suffixtree.png";
+import tictactoeLogo from "./assets/work_logo/tictactoe.png";
+import telephoneLogo from "./assets/work_logo/telephone.png";
+// ------------------------------------
+// ⭐ SKILLS SECTION
+// ------------------------------------
 export const SkillsInfo = [
   {
     title: 'Frontend',
     skills: [
       { name: 'HTML', logo: htmlLogo },
       { name: 'CSS', logo: cssLogo },
-      { name: 'SASS', logo: sassLogo },
       { name: 'JavaScript', logo: javascriptLogo },
-      { name: 'React JS', logo: reactjsLogo },
-      { name: 'Angular', logo: angularLogo },
-      { name: 'Redux', logo: reduxLogo },
-      { name: 'Next JS', logo: nextjsLogo },
+      { name: 'React.js', logo: reactjsLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
-      { name: 'GSAP', logo: gsapLogo },
-      { name: 'Material UI', logo: materialuiLogo },
-      { name: 'Bootstrap', logo: bootstrapLogo },
     ],
   },
   {
     title: 'Backend',
     skills: [
-      { name: 'Springboot', logo: springbootLogo },
-      { name: 'Node JS', logo: nodejsLogo },
-      { name: 'Express JS', logo: expressjsLogo },
+      { name: 'Node.js', logo: nodejsLogo },
+      { name: 'Express.js', logo: expressjsLogo },
       { name: 'MySQL', logo: mysqlLogo },
       { name: 'MongoDB', logo: mongodbLogo },
       { name: 'Firebase', logo: firebaseLogo },
@@ -92,9 +81,8 @@ export const SkillsInfo = [
       { name: 'C++', logo: cppLogo },
       { name: 'Java', logo: javaLogo },
       { name: 'Python', logo: pythonLogo },
-      { name: 'C-Sharp', logo: csharpLogo },
+      { name: 'C#', logo: csharpLogo },
       { name: 'JavaScript', logo: javascriptLogo },
-      { name: 'TypeScript', logo: typescriptLogo },
     ],
   },
   {
@@ -104,198 +92,258 @@ export const SkillsInfo = [
       { name: 'GitHub', logo: githubLogo },
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Postman', logo: postmanLogo },
-      { name: 'Compass', logo: mcLogo },
+      { name: 'Figma', logo: figmaLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
-      { name: 'Figma', logo: figmaLogo },
     ],
   },
 ];
 
-  export const experiences = [
-    {
-      id: 0,
-      img: webverseLogo,
-      role: "Fullstack Developer",
-      company: "Webverse Digital",
-      date: "April 2024 - Present",
-      desc: "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
-      skills: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React JS",
-        "TypeScript",
-        "Node JS",
-        "Tailwind CSS",
-        "MongoDb",
-        "Redux",
-        " Next Js",
-      ],
-    },
-    {
-      id: 1,
-      img: agcLogo,
-      role: "Fullstack Engineer",
-      company: "Agumentik Group of Companies",
-      date: "July 2023 - March 2024",
-      desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
-      skills: [
-        "ReactJS",
-        "Redux",
-        "JavaScript",
-        "Tailwind CSS",
-        "HTML",
-        "CSS",
-        "SQL",
-      ],
-    },
-    {
-      id: 2,
-      img: newtonschoolLogo,
-      role: "Frontend Intern",
-      company: "Newton School",
-      date: "September 2021 - August 2022",
-      desc: "Worked as a Frontend Developer Intern, designing and implementing scalable UI components and responsive websites using HTML, CSS, JavaScript, Bootstrap, and Material UI. Collaborated with the design team to translate wireframes and prototypes from Figma into interactive, user-friendly web pages.",
-      skills: [
-        "HTML",
-        "CSS",
-        "Javascript",
-        "Bootstrap",
-        "Figma",
-        "Material UI",
-      ],
-    },
-  ];
-  
-  export const education = [
-    {
-      id: 0,
-      img: glaLogo,
-      school: "GLA University, Mathura",
-      date: "Sept 2022 - July 2024",
-      grade: "7.81 CGPA",
-      desc: "I have completed my Master's degree (MCA) in Computer Applications from GLA University, Mathura. During my time at GLA, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge. My experience at GLA University has been instrumental in shaping my technical abilities and professional growth.",
-      degree: "Master of Computer Applications - MCA",
-    },
-    {
-      id: 1,
-      img: bsaLogo,
-      school: "BSA College, Mathura",
-      date: "Sept 2018 - Aug 2021",
-      grade: "73.2%",
-      desc: "I completed my Bachelor's degree in Computer Science (B.Sc.) from BSA College, Mathura. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Data Structures and Algorithms to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development. My time at BSA College allowed me to work on projects that applied theoretical concepts to real-world problems.",
-      degree: "Bachelor of Science - BSC (Computer Science)",
-    },
-    {
-      id: 2,
-      img: vpsLogo,
-      school: "Vatsalya Public School Govardhan, Mathura",
-      date: "Apr 2017 - March 2018",
-      grade: "78%",
-      desc: "I completed my class 12 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
-      degree: "CBSE(XII) - PCM with Computer Science",
-    },
-    {
-      id: 3,
-      img: vpsLogo,
-      school: "Vatsalya Public School Govardhan, Mathura",
-      date: "Apr 2015 - March 2016",
-      grade: "87.5%",
-      desc: "I completed my class 10 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Science with Computer.",
-      degree: "CBSE(X), Science with Computer Application",
-    },
-  ];
-  
-  export const projects = [
-    {
-      id: 0,
-      title: "GitHub Profile Detective",
-      description:
-        "A powerful and user-friendly React.js application designed to uncover and showcase detailed GitHub profile information. Simply enter a GitHub username, and the app fetches comprehensive data, including profile stats, repositories, followers, and contributions. The intuitive interface ensures a seamless experience, making it a must-visit tool for developers and recruiters.",
-      image: githubdetLogo,
-      tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
-      github: "https://github.com/codingmastr/GitHub-Profile-Search-App-Using-React-JS",
-      webapp: "https://githubprofiledetective.netlify.app/",
-    },
-    {
-      id: 1,
-      title: "CS Prep",
-      description:
-        "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests. The platform offers comprehensive profile stats and detailed results, helping students track and improve their preparation journey effectively.",
-      image: csprepLogo,
-      tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "CSS", "JavaScript"],
-      github: "https://github.com/codingmastr/CSPrep",
-      webapp: "https://csprep.netlify.app/",
-    },
-    {
-      id: 2,
-      title: "Movie Recommendation App",
-      description:
-        "A React-based web application that provides movie recommendations based on different criteria, such as genres, user preferences, and popular trends. The intuitive design and smooth experience make it a go-to app for movie enthusiasts.",
-      image: movierecLogo,
-      tags: ["React JS", "API", "HTML", "CSS", "JavaScript"],
-      github: "https://github.com/codingmastr/Movie-Recommendation-App",
-      webapp: "https://movie-recommendation-app-jet.vercel.app/",
-    },
-    {
-      id: 3,
-      title: "Email Validator NPM Package",
-      description:
-        "An efficient and customizable NPM package for validating email addresses. Built using React.js and Node.js, it provides robust validation features to help developers ensure that email inputs meet required formats and standards.",
-      image: npmLogo,
-      tags: ["React JS", "Node.js", "NPM", "Validation"],
-      github: "https://github.com/codingmastr/cmtk-email-validator",
-      webapp: "https://www.npmjs.com/package/cmtk-email-validator",
-    },
-    {
-      id: 4,
-      title: "Task Reminder Chrome Extension Tool",
-      description:
-        "A productivity-boosting Chrome extension designed to help users manage and remember their daily tasks. Built using JavaScript, it offers a simple interface with reminders and task notifications to keep users on track.",
-      image: taskremLogo,
-      tags: ["JavaScript", "Chrome Extension", "HTML", "CSS"],
-      github: "https://github.com/codingmastr/Task-Reminder-Tool",
-      webapp: "chrome://extensions/?id=kngheeibjnnidhfoomkpnbeghackheci",
-    },
-    {
-      id: 5,
-      title: "Webverse Digital",
-      description:
-        "The official website for Webverse Digital, a creative digital marketing agency. Built using HTML, CSS, and JavaScript, it features visually appealing animations and a clean design to showcase the agency's services.",
-      image: webverLogo,
-      tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
-      github: "https://github.com/codingmastr/Webverse-Digital",
-      webapp: "https://webversedigital.com/",
-    },
-    {
-      id: 6,
-      title: "Coding Master",
-      description:
-        "An ed-tech platform where users can access tech and coding-related blogs, notes, interview questions, e-books, and premium content with payment integration. Built with full-stack technologies for a seamless learning experience.",
-      image: cmLogo,
-      tags: ["React JS", "Node.js", "MongoDB", "Express", "Payment Integration"],
-      github: "https://codingmasterweb.in/",
-      webapp: "https://codingmasterweb.in/",
-    },
-    {
-      id: 7,
-      title: "Image Search App",
-      description:
-        "A React.js-based image search application that allows users to search and download high-quality images from the web. Built using external APIs to ensure a vast library of results for various queries.",
-      image: imagesearchLogo,
-      tags: ["React JS", "API", "Search Feature", "CSS", "Javascript"],
-      github: "https://github.com/codingmastr/Image-Search-App",
-      webapp: "https://imagsearch.netlify.app/",
-    },
-    {
-      id: 8,
-      title: "Image Background Remover",
-      description:
-        "An efficient background removal app built with React.js and API integration. Users can upload any image, remove the background, and download the transparent version for further use.",
-      image: removebgLogo,
-      tags: ["React JS", "API", "Image Processing", "HTML", "CSS", "Javascript"],
-      github: "https://github.com/codingmastr/Image-Background-Remover",
-      webapp: "https://removeyourbg.netlify.app/",
-    },
-  ];  
+// ------------------------------------
+// ⭐ POSITION OF RESPONSIBILITY
+// ------------------------------------
+export const responsibilities = [
+  {
+    id: 1,
+    role: "DSA Mentor",
+    organization: "Smart Interviews",
+    date: "Jan 2025 – Jul 2025",
+    desc: "Mentored 300+ students in Data Structures and Algorithms, improving their problem-solving through structured guidance and competitive programming strategies.",
+    skills: ["DSA", "Mentoring", "Problem Solving", "Competitive Programming"],
+  },
+  {
+    id: 2,
+    role: "Organizing Team Member",
+    organization: "NSS VNRVJIET",
+    date: "2024 – Present",
+    desc: "Led 5+ major initiatives including Mega Blood Donation Camp, Village Camp, Clay Ganesha, and Fistful of Rice; managed event execution and team coordination.",
+    skills: ["Leadership", "Event Management", "Teamwork"],
+  },
+  {
+    id: 3,
+    role: "Head Design Coordinator",
+    organization: "Social Media Club – VNRVJIET",
+    date: "2024 – Present",
+    desc: "Designed 25+ social media creatives with 50K+ reach for major college events; managed branding, visuals, and content direction.",
+    skills: ["Creativity", "Design", "Branding", "Canva"],
+  },
+];
+
+// ------------------------------------
+// ⭐ EDUCATION
+// ------------------------------------
+export const education = [
+  {
+    id: 1,
+    degree: "Bachelor of Technology – Computer Science and Engineering",
+    specialization: "Artificial Intelligence and Machine Learning",
+    school: "VNR Vignana Jyothi Institute of Engineering & Technology",
+    date: "Nov 2022 – May 2026",
+    grade: "CGPA: 9.02",
+    desc: "Building strong foundations in programming, AI/ML, and software engineering.",
+    img: vnrLogo,
+  },
+  {
+    id: 2,
+    degree: "Intermediate – MPC",
+    specialization: "Mathematics, Physics, Chemistry",
+    school: "Nano Junior College & IIT Academy, Hyderabad",
+    date: "May 2019 – Jul 2021",
+    grade: "Percentage: 98.2%",
+    desc: "Achieved academic excellence in Mathematics, Physics, and Chemistry.",
+    img: nanoLogo,
+  },
+  {
+    id: 3,
+    degree: "Matriculation – SSC",
+    specialization :"Science and Mathematics",
+    school: "Gowtham Model School, Hyderabad",
+    date: "Jun 2018 – Apr 2019",
+    grade: "GPA: 10.0",
+    desc: "Secured top performance with consistent excellence in academics.",
+    img: gowthamLogo,
+  },
+];
+
+// ------------------------------------
+// ⭐ PROJECTS
+// ------------------------------------
+export const projects = [
+  // -------------------------
+  // WEB / FULL-STACK PROJECTS
+  // -------------------------
+  {
+    id: 1,
+    title: "StockTraQ – Stock & IPO Tracking Platform",
+    type: "web",
+    description:
+      "A full-stack MERN platform to track stocks, IPO performance, sentiment analysis, and personalized watchlists.",
+    image: stocktraqLogo,
+    tags: ["MERN", "React", "Node.js", "MongoDB", "Express"],
+    github: "",
+    webapp: "",
+  },
+
+  {
+    id: 2,
+    title: "Vector Junior College – Website",
+    type: "web",
+    description:
+      "A responsive website built for Vector Junior College with modern UI, interactive components, and optimized performance.",
+    image: vectorjcLogo,
+    tags: ["React", "JavaScript", "Tailwind CSS"],
+    github: "",
+    webapp: "",
+  },
+
+  {
+    id: 3,
+    title: "Personalized Travel Recommendation System",
+    type: "web",
+    description:
+      "AI-powered travel itinerary generator for 100+ tourist spots with chatbot support, real-time recommendations, and budget tracking.",
+    image: travelLogo,
+    tags: ["React", "JavaScript", "Tailwind CSS", "Firebase", "Gemini API"],
+    github: "",
+    webapp: "",
+  },
+
+  {
+    id: 4,
+    title: "Real-Time Chat Application",
+    type: "web",
+    description:
+      "A secure messaging system using Python sockets with file transfers, multi-user support, and authentication.",
+    image: chatappLogo,
+    tags: ["Python", "Socket Programming", "Tkinter", "TCP/IP"],
+    github: "",
+    webapp: "",
+  },
+
+  // -------------------------
+  // AI / ML / NLP PROJECTS
+  // -------------------------
+  {
+    id: 5,
+    title: "AskMyPaper – AI Research Assistant",
+    type: "ml",
+    description:
+      "An NLP-powered PDF Question Answering tool using Gemini LLM, LangChain, FAISS, and embeddings for research automation.",
+    image: askmypaperLogo,
+    tags: ["Python", "Streamlit", "LangChain", "FAISS", "Gemini API"],
+    github: "",
+    colab: "",
+  },
+
+  {
+    id: 6,
+    title: "AirClick – AI Virtual Mouse",
+    type: "ml",
+    description:
+      "A gesture-controlled virtual mouse using OpenCV + MediaPipe with 85% recognition accuracy and low latency.",
+    image: virtualmouseLogo,
+    tags: ["Python", "OpenCV", "MediaPipe", "NumPy"],
+    github: "",
+    colab: "",
+  },
+
+  {
+    id: 7,
+    title: "Journey Junction – AI Travel Recommender",
+    type: "ml",
+    description:
+      "An ML-powered travel recommendation engine that predicts top destinations and optimizes itinerary plans.",
+    image: journeyLogo,
+    tags: ["Python", "Machine Learning", "Pandas", "NumPy"],
+    github: "",
+    colab: "",
+  },
+
+  {
+    id: 8,
+    title: "Video Games Sales Analysis",
+    type: "ml",
+    description:
+      "Exploratory data analysis and ML-based predictions for global game sales trends and insights.",
+    image: videogamesLogo,
+    tags: ["Python", "EDA", "Scikit-learn", "Pandas"],
+    github: "",
+    colab: "",
+  },
+
+  {
+    id: 9,
+    title: "Income Testing Hypothesis",
+    type: "ml",
+    description:
+      "A statistical hypothesis testing project analyzing income distribution using data engineering workflows.",
+    image: incomeLogo,
+    tags: ["Python", "Statistics", "Pandas", "Hypothesis Testing"],
+    github: "",
+    colab: "",
+  },
+
+  {
+    id: 10,
+    title: "Weather Data Analysis",
+    type: "ml",
+    description:
+      "A complete data engineering and visualization workflow for analyzing multi-year weather patterns.",
+    image: weatherLogo,
+    tags: ["Python", "Pandas", "Matplotlib", "Data Engineering"],
+    github: "",
+    colab: "",
+  },
+
+  {
+    id: 11,
+    title: "Flight Delay Analysis Dashboard",
+    type: "ml",
+    description:
+      "A PowerBI dashboard analyzing factors contributing to flight delays across multiple airports.",
+    image: flightdelayLogo,
+    tags: ["PowerBI", "Data Visualization"],
+    github: "",
+    colab: "",
+  },
+
+  {
+    id: 12,
+    title: "Suffix Tree Visualizer",
+    type: "ml",
+    description:
+      "Python-based suffix tree visualization tool for understanding string algorithms interactively.",
+    image: suffixtreeLogo,
+    tags: ["Python", "Algorithms", "DSA"],
+    github: "",
+    colab: "",
+  },
+
+  {
+    id: 13,
+    title: "AI TicTacToe – Python GUI",
+    type: "ml",
+    description:
+      "A Python-based TicTacToe game with AI opponent using minimax algorithm and tkinter GUI.",
+    image: tictactoeLogo,
+    tags: ["Python", "Tkinter", "Minimax", "Game AI"],
+    github: "",
+    colab: "",
+  },
+
+  // -------------------------
+  // OTHER / SYSTEMS PROJECTS
+  // -------------------------
+  {
+    id: 14,
+    title: "Telephone Directory (C Program)",
+    type: "other",
+    description:
+      "A simple CLI-based telephone directory built in C with add, update, delete, and search features.",
+    image: telephoneLogo,
+    tags: ["C", "DSA", "CLI"],
+    github: "",
+    webapp: "",
+  },
+];
+
