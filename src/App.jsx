@@ -18,6 +18,7 @@ import AcademicHighlightsPage from "./components/Highlights/AcademicHighlightsPa
 import MouseGlow from "./components/MouseGlow";
 
 
+// UPDATED SCROLL HANDLER
 function ScrollToHash() {
   const location = useLocation();
 
@@ -26,14 +27,26 @@ function ScrollToHash() {
       const id = location.hash.replace("#", "");
       const el = document.getElementById(id);
 
-      setTimeout(() => {
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 200);
+      if (el) {
+        const navbarHeight = 120; // Adjust if your navbar height changes
+
+        setTimeout(() => {
+          const rect = el.getBoundingClientRect();
+          const elementY = rect.top + window.pageYOffset;
+          const offsetY = elementY - navbarHeight;
+
+          window.scrollTo({
+            top: offsetY,
+            behavior: "smooth",
+          });
+        }, 150); // Wait for DOM to render
+      }
     }
   }, [location]);
 
   return null;
 }
+
 
 const App = () => {
   return (
@@ -42,7 +55,7 @@ const App = () => {
 
       <div className="relative min-h-screen w-full overflow-hidden">
 
-        {/* ------------------- DARK GRAY + LIGHT PURPLE BACKGROUND ------------------- */}
+        {/* ------------------- BACKGROUND ------------------- */}
         <div className="absolute inset-0 -z-10 bg-[#0a0616]">
 
           {/* Very Soft Purple Mist */}
@@ -71,10 +84,11 @@ const App = () => {
             "
           />
         </div>
-        {/* ---------------------------------------------------------------------- */}
-         <MouseGlow />
+
+        <MouseGlow />
+
         {/* CONTENT */}
-        <div className="relative z-10 pt-20">
+        <div className="relative z-10 pt-5">
           <Navbar />
 
           <Routes>
@@ -86,6 +100,7 @@ const App = () => {
                   <Skills />
                   <Work />
                   <Education />
+                  <AcademicHighlightsPage/>
                   <Contact />
                 </>
               }
@@ -94,7 +109,6 @@ const App = () => {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/certifications" element={<CertificationsPage />} />
             <Route path="/certifications/:id" element={<PDFViewer />} />
-            <Route path="/academic-highlights" element={<AcademicHighlightsPage />} />
           </Routes>
 
           <Footer />

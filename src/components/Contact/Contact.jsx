@@ -4,7 +4,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // Icons
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaTwitter, FaPhone } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaEnvelope,
+  FaTwitter,
+  FaPhone,
+} from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -36,7 +43,13 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="scroll-mt-28 flex flex-col items-center justify-center py-24 px-[6vw] md:px-[8vw] lg:px-[10vw] font-sans"
+      className="
+        scroll-mt-40 
+        pb-32 
+        flex flex-col items-center justify-center 
+        py-24 px-[6vw] md:px-[8vw] lg:px-[10vw] 
+        font-sans
+      "
     >
       <ToastContainer />
 
@@ -50,21 +63,19 @@ const Contact = () => {
       </div>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12">
-
-        {/* LEFT — FORM (2/3 width) */}
+        {/* LEFT — FORM */}
         <div className="md:col-span-2 bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
           <h3 className="text-xl font-semibold text-white text-center mb-4">
             Send Me A Message
           </h3>
 
           <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-4">
-
             <input
               type="email"
               name="user_email"
               placeholder="Your Email"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600
+              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 
                         focus:outline-none focus:border-purple-500"
             />
 
@@ -73,7 +84,7 @@ const Contact = () => {
               name="user_name"
               placeholder="Your Name"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600
+              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 
                         focus:outline-none focus:border-purple-500"
             />
 
@@ -82,7 +93,7 @@ const Contact = () => {
               placeholder="Message"
               rows="4"
               required
-              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600
+              className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 
                         focus:outline-none focus:border-purple-500"
             />
 
@@ -93,11 +104,10 @@ const Contact = () => {
             >
               Send
             </button>
-
           </form>
         </div>
 
-        {/* RIGHT — CONTACT INFORMATION (1/3 width) */}
+        {/* RIGHT — CONTACT INFO */}
         <div className="md:col-span-1 bg-[#0d081f] p-8 rounded-lg shadow-lg border border-gray-700">
           <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
 
@@ -133,8 +143,6 @@ const Contact = () => {
           <h3 className="text-xl font-bold text-white mt-10 mb-4">Follow Me</h3>
 
           <div className="flex items-center gap-6">
-
-            {/* GitHub */}
             <a
               href="https://github.com/usk2003"
               target="_blank"
@@ -143,7 +151,6 @@ const Contact = () => {
               <FaGithub size={24} className="text-gray-300 hover:text-white transition" />
             </a>
 
-            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/usk2003/"
               target="_blank"
@@ -152,7 +159,6 @@ const Contact = () => {
               <FaLinkedin size={24} className="text-blue-400 hover:text-blue-300 transition" />
             </a>
 
-            {/* Instagram */}
             <a
               href="https://instagram.com"
               target="_blank"
@@ -161,7 +167,6 @@ const Contact = () => {
               <FaInstagram size={24} className="text-pink-400 hover:text-pink-300 transition" />
             </a>
 
-            {/* Twitter */}
             <a
               href="https://twitter.com/usk2003"
               target="_blank"
@@ -169,12 +174,10 @@ const Contact = () => {
             >
               <FaTwitter size={24} className="text-blue-400 hover:text-blue-300 transition" />
             </a>
-
           </div>
         </div>
       </div>
 
-      
     </section>
   );
 };

@@ -71,23 +71,6 @@ const Education = () => {
         ))}
       </div>
 
-      {/* Academic Highlights Button */}
-      <div className="text-center mt-12">
-        <a
-          href="/academic-highlights"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            px-8 py-3 bg-purple-600 hover:bg-purple-800
-            text-white rounded-xl font-semibold shadow-lg
-            hover:shadow-[0_0_15px_rgba(168,85,247,0.8)]
-            transition-all duration-300
-          "
-        >
-          Academic Highlights →
-        </a>
-      </div>
-
     </section>
   );
 };
