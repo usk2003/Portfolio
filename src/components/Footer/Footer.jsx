@@ -21,7 +21,6 @@ const Footer = () => {
           {[
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
-            { name: "Experience", id: "experience" },
             { name: "Projects", id: "projects" },
             { name: "Education", id: "education" },
           ].map((item, index) => (
@@ -34,25 +33,6 @@ const Footer = () => {
             </button>
           ))}
         </nav>
-
-        {/* Social Media Icons - Responsive */}
-        <div className="flex flex-wrap justify-center space-x-4 mt-6">
-          {[
-            { icon: <FaTwitter />, link: "https://twitter.com/_usk2003" },
-            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/usk2003" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/_usk2003" },
-          ].map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl hover:text-purple-500 transition-transform transform hover:scale-110"
-            >
-              {item.icon}
-            </a>
-          ))}
-        </div>
 
         {/* Copyright Text */}
         <p className="text-sm text-gray-400 mt-6">

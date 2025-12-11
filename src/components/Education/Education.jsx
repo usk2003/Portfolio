@@ -5,7 +5,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 px-[5vw] md:px-[8vw] lg:px-[10vw] font-sans bg-skills-gradient"
+      className="py-24 px-[5vw] md:px-[8vw] lg:px-[10vw] font-sans"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
@@ -21,42 +21,43 @@ const Education = () => {
         {education.map((edu) => (
           <div
             key={edu.id}
-            className="p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transition-transform duration-300 hover:scale-105"
+            className="
+              p-8 rounded-2xl
+              shadow-2xl border border-white 
+              bg-gray-900 backdrop-blur-md
+              shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]
+              transition-transform duration-300 hover:scale-105
+            "
           >
-            {/* Row layout: Text Left, Image Right */}
+            {/* Row layout */}
             <div className="flex justify-between items-center">
 
-              {/* Left Side - Education Info */}
+              {/* Left Info */}
               <div className="flex-1 pr-6">
                 <h3 className="text-xl font-semibold text-white">
                   {edu.degree}
                 </h3>
 
-                {/* Specialization */}
                 <p className="text-md text-purple-400 font-semibold">
                   Specialization: {edu.specialization}
                 </p>
 
-                {/* School Name */}
                 <h4 className="text-md text-gray-300 mt-1">
                   {edu.school}
                 </h4>
 
-                {/* Date */}
                 <p className="text-sm text-gray-500 mt-1">
                   {edu.date}
                 </p>
 
-                {/* Grade */}
                 <p className="mt-4 text-gray-400 font-bold">
                   Grade: {edu.grade}
                 </p>
 
-                {/* Description */}
                 <p className="mt-2 text-gray-400">{edu.desc}</p>
               </div>
 
-              {/* Right Side - Image */}
+              {/* Right Image */}
               <div className="flex-shrink-0">
                 <img
                   src={edu.img}
@@ -69,6 +70,24 @@ const Education = () => {
           </div>
         ))}
       </div>
+
+      {/* Academic Highlights Button */}
+      <div className="text-center mt-12">
+        <a
+          href="/academic-highlights"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            px-8 py-3 bg-purple-600 hover:bg-purple-800
+            text-white rounded-xl font-semibold shadow-lg
+            hover:shadow-[0_0_15px_rgba(168,85,247,0.8)]
+            transition-all duration-300
+          "
+        >
+          Academic Highlights →
+        </a>
+      </div>
+
     </section>
   );
 };

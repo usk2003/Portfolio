@@ -1,6 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
+// Components
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
@@ -9,53 +10,91 @@ import Work from "./components/Work/Work";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import BlurBlob from "./components/BlurBlob";
+
 import ProjectsPage from "./components/Work/ProjectsPage";
-import PositionOfResponsibility from "./components/Experience/Experience";
-import Highlights from "./components/Highlights/Highlights";
 import CertificationsPage from "./components/Certifications/CertificationsPage";
 import PDFViewer from "./components/Certifications/PDFViewer";
+import AcademicHighlightsPage from "./components/Highlights/AcademicHighlightsPage";
+import MouseGlow from "./components/MouseGlow";
+
+
+function ScrollToHash() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const el = document.getElementById(id);
+
+      setTimeout(() => {
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 200);
+    }
+  }, [location]);
+
+  return null;
+}
 
 const App = () => {
   return (
     <Router>
-      <div className="bg-[#050414]">
+      <ScrollToHash />
 
-        {/* Background Blur */}
-        <BlurBlob
-          position={{ top: "35%", left: "20%" }}
-          size={{ width: "30%", height: "40%" }}
-        />
-        
-        {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+      <div className="relative min-h-screen w-full overflow-hidden">
 
-        <div className="relative pt-20">
+        {/* ------------------- DARK GRAY + LIGHT PURPLE BACKGROUND ------------------- */}
+        <div className="absolute inset-0 -z-10 bg-[#0a0616]">
+
+          {/* Very Soft Purple Mist */}
+          <div
+            className="
+              absolute top-[-200px] left-[-150px]
+              w-[600px] h-[600px]
+              bg-purple-700/15 blur-[160px] rounded-full
+            "
+          />
+
+          {/* Secondary Soft Purple Glow */}
+          <div
+            className="
+              absolute bottom-[-200px] right-[-150px]
+              w-[500px] h-[500px]
+              bg-purple-500/10 blur-[150px] rounded-full
+            "
+          />
+
+          {/* Faint Gray Vignette */}
+          <div
+            className="
+              absolute inset-0
+              bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_70%)]
+            "
+          />
+        </div>
+        {/* ---------------------------------------------------------------------- */}
+         <MouseGlow />
+        {/* CONTENT */}
+        <div className="relative z-10 pt-20">
           <Navbar />
 
           <Routes>
-
-            {/* Home Page */}
             <Route
               path="/"
               element={
                 <>
                   <About />
                   <Skills />
-                  <Work />          {/* Shows only 4 projects */}
+                  <Work />
                   <Education />
-                  <Highlights />
-                  <PositionOfResponsibility />
                   <Contact />
                 </>
               }
             />
 
-            {/* Full Projects Page */}
             <Route path="/projects" element={<ProjectsPage />} />
-            
             <Route path="/certifications" element={<CertificationsPage />} />
             <Route path="/certifications/:id" element={<PDFViewer />} />
+            <Route path="/academic-highlights" element={<AcademicHighlightsPage />} />
           </Routes>
 
           <Footer />

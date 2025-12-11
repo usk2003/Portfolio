@@ -37,7 +37,6 @@ import gowthamLogo from './assets/education_logo/gowtham.png';
 // ------------------------------------
 import stocktraqLogo from "./assets/work_logo/stocktraq.png";
 import vectorjcLogo from "./assets/work_logo/vectorjc.png";
-import travelLogo from "./assets/work_logo/travel.png";
 import askmypaperLogo from "./assets/work_logo/askmypaper.png";
 import chatappLogo from "./assets/work_logo/chatapp.png";
 import virtualmouseLogo from "./assets/work_logo/virtualmouse.png";
@@ -49,6 +48,7 @@ import flightdelayLogo from "./assets/work_logo/flightdelay.png";
 import suffixtreeLogo from "./assets/work_logo/suffixtree.png";
 import tictactoeLogo from "./assets/work_logo/tictactoe.png";
 import telephoneLogo from "./assets/work_logo/telephone.png";
+import nssLogo from "./assets/work_logo/nss.png";
 // ------------------------------------
 // ⭐ SKILLS SECTION
 // ------------------------------------
@@ -92,7 +92,6 @@ export const SkillsInfo = [
       { name: 'GitHub', logo: githubLogo },
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Postman', logo: postmanLogo },
-      { name: 'Figma', logo: figmaLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
     ],
@@ -170,12 +169,13 @@ export const education = [
 // ------------------------------------
 export const projects = [
   // -------------------------
-  // WEB / FULL-STACK PROJECTS
+  // WEB DEVELOPMENT PROJECTS
   // -------------------------
   {
     id: 1,
     title: "StockTraQ – Stock & IPO Tracking Platform",
     type: "web",
+    category: "Web Development",
     description:
       "A full-stack MERN platform to track stocks, IPO performance, sentiment analysis, and personalized watchlists.",
     image: stocktraqLogo,
@@ -186,8 +186,21 @@ export const projects = [
 
   {
     id: 2,
-    title: "Vector Junior College – Website",
+    title: "Journey Junction – AI Trip Planner",
+    type: "ml",
+    category: "Web Development",
+    description:
+      "An ML-powered recommender that predicts top destinations and optimizes itineraries.",
+    image: journeyLogo,
+    tags: ["Python", "Machine Learning", "Pandas", "NumPy"],
+    github: "",
+    colab: "",
+  },
+  {
+    id: 3,
+    title: "Website - Vector Junior College",
     type: "web",
+    category: "Web Development",
     description:
       "A responsive website built for Vector Junior College with modern UI, interactive components, and optimized performance.",
     image: vectorjcLogo,
@@ -195,40 +208,29 @@ export const projects = [
     github: "",
     webapp: "",
   },
-
-  {
-    id: 3,
-    title: "Personalized Travel Recommendation System",
-    type: "web",
-    description:
-      "AI-powered travel itinerary generator for 100+ tourist spots with chatbot support, real-time recommendations, and budget tracking.",
-    image: travelLogo,
-    tags: ["React", "JavaScript", "Tailwind CSS", "Firebase", "Gemini API"],
-    github: "",
-    webapp: "",
-  },
-
   {
     id: 4,
-    title: "Real-Time Chat Application",
+    title: "Website - NSS VNRVJIET",
     type: "web",
+    category: "Web Development",
     description:
-      "A secure messaging system using Python sockets with file transfers, multi-user support, and authentication.",
-    image: chatappLogo,
-    tags: ["Python", "Socket Programming", "Tkinter", "TCP/IP"],
+      "A modern and responsive website for NSS VNRVJIET featuring event updates, volunteer management, public announcements, and gallery integration.",
+    image: nssLogo, // ← add your imported image here
+    tags: ["React", "JavaScript", "Tailwind CSS"],
     github: "",
     webapp: "",
   },
 
   // -------------------------
-  // AI / ML / NLP PROJECTS
+  // MACHINE LEARNING PROJECTS
   // -------------------------
   {
     id: 5,
     title: "AskMyPaper – AI Research Assistant",
     type: "ml",
+    category: "Machine Learning",
     description:
-      "An NLP-powered PDF Question Answering tool using Gemini LLM, LangChain, FAISS, and embeddings for research automation.",
+      "An NLP-powered PDF Question Answering tool using Gemini LLM, LangChain and FAISS.",
     image: askmypaperLogo,
     tags: ["Python", "Streamlit", "LangChain", "FAISS", "Gemini API"],
     github: "",
@@ -239,32 +241,33 @@ export const projects = [
     id: 6,
     title: "AirClick – AI Virtual Mouse",
     type: "ml",
+    category: "Machine Learning",
     description:
-      "A gesture-controlled virtual mouse using OpenCV + MediaPipe with 85% recognition accuracy and low latency.",
+      "A gesture-controlled virtual mouse using OpenCV + MediaPipe with high accuracy.",
     image: virtualmouseLogo,
     tags: ["Python", "OpenCV", "MediaPipe", "NumPy"],
     github: "",
     colab: "",
   },
-
   {
     id: 7,
-    title: "Journey Junction – AI Travel Recommender",
+    title: "XnO - AI TicTacToe Python GUI",
     type: "ml",
+    category: "Machine Learning",
     description:
-      "An ML-powered travel recommendation engine that predicts top destinations and optimizes itinerary plans.",
-    image: journeyLogo,
-    tags: ["Python", "Machine Learning", "Pandas", "NumPy"],
+      "A Python TicTacToe game with a minimax-based AI opponent.",
+    image: tictactoeLogo,
+    tags: ["Python", "Tkinter", "Minimax", "Game AI"],
     github: "",
     colab: "",
   },
-
   {
     id: 8,
     title: "Video Games Sales Analysis",
     type: "ml",
+    category: "Machine Learning",
     description:
-      "Exploratory data analysis and ML-based predictions for global game sales trends and insights.",
+      "Exploratory data analysis and ML predictions for global video game sales trends.",
     image: videogamesLogo,
     tags: ["Python", "EDA", "Scikit-learn", "Pandas"],
     github: "",
@@ -275,8 +278,9 @@ export const projects = [
     id: 9,
     title: "Income Testing Hypothesis",
     type: "ml",
+    category: "Machine Learning",
     description:
-      "A statistical hypothesis testing project analyzing income distribution using data engineering workflows.",
+      "A statistical hypothesis testing study analyzing income distribution patterns.",
     image: incomeLogo,
     tags: ["Python", "Statistics", "Pandas", "Hypothesis Testing"],
     github: "",
@@ -287,32 +291,50 @@ export const projects = [
     id: 10,
     title: "Weather Data Analysis",
     type: "ml",
+    category: "Machine Learning",
     description:
-      "A complete data engineering and visualization workflow for analyzing multi-year weather patterns.",
+      "A complete data engineering and visualization workflow for multi-year weather trends.",
     image: weatherLogo,
     tags: ["Python", "Pandas", "Matplotlib", "Data Engineering"],
     github: "",
     colab: "",
   },
-
+  // -------------------------
+  // OTHER / SYSTEM PROJECTS
+  // -------------------------
   {
     id: 11,
+    title: "Real-Time Chat Application",
+    type: "web",
+    category: "Others",
+    description:
+      "A secure messaging system using Python sockets with authentication and multi-user communication.",
+    image: chatappLogo,
+    tags: ["Python", "Socket Programming", "Tkinter", "TCP/IP"],
+    github: "",
+    webapp: "",
+  },
+
+  {
+    id: 12,
     title: "Flight Delay Analysis Dashboard",
     type: "ml",
+    category: "Others",
     description:
-      "A PowerBI dashboard analyzing factors contributing to flight delays across multiple airports.",
+      "A PowerBI dashboard analyzing causes of flight delays across airports.",
     image: flightdelayLogo,
     tags: ["PowerBI", "Data Visualization"],
     github: "",
     colab: "",
   },
-
+  
   {
-    id: 12,
+    id: 13,
     title: "Suffix Tree Visualizer",
     type: "ml",
+    category: "Others",
     description:
-      "Python-based suffix tree visualization tool for understanding string algorithms interactively.",
+      "A Python tool for visualizing suffix trees to understand string algorithms clearly.",
     image: suffixtreeLogo,
     tags: ["Python", "Algorithms", "DSA"],
     github: "",
@@ -320,30 +342,15 @@ export const projects = [
   },
 
   {
-    id: 13,
-    title: "AI TicTacToe – Python GUI",
-    type: "ml",
-    description:
-      "A Python-based TicTacToe game with AI opponent using minimax algorithm and tkinter GUI.",
-    image: tictactoeLogo,
-    tags: ["Python", "Tkinter", "Minimax", "Game AI"],
-    github: "",
-    colab: "",
-  },
-
-  // -------------------------
-  // OTHER / SYSTEMS PROJECTS
-  // -------------------------
-  {
     id: 14,
     title: "Telephone Directory (C Program)",
     type: "other",
+    category: "Others",
     description:
-      "A simple CLI-based telephone directory built in C with add, update, delete, and search features.",
+      "A CLI-based telephone directory in C with CRUD operations.",
     image: telephoneLogo,
     tags: ["C", "DSA", "CLI"],
     github: "",
     webapp: "",
   },
 ];
-
