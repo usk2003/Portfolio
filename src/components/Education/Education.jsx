@@ -5,13 +5,17 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-24 px-[5vw] md:px-[8vw] lg:px-[10vw] font-sans"
+      className="py-10 px-[5vw] md:px-[8vw] lg:px-[10vw] font-sans"
     >
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-black tracking-wide">
+          EDUCATION
+        </h2>
+
+        <div className="w-32 h-1 mx-auto mt-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+
+        <p className="text-gray-700 mt-6 text-lg max-w-2xl mx-auto">
           My academic journey and achievements so far.
         </p>
       </div>
@@ -22,55 +26,66 @@ const Education = () => {
           <div
             key={edu.id}
             className="
-              p-8 rounded-2xl
-              shadow-2xl border border-white 
-              bg-gray-900 backdrop-blur-md
-              shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]
-              transition-transform duration-300 hover:scale-105
-            "
-          >
-            {/* Row layout */}
-            <div className="flex justify-between items-center">
+                relative p-8 rounded-3xl
+                border border-white/10
+                bg-blue-100/50 backdrop-blur-xl
+                shadow-lg
+                hover:border-blue-500
+                hover:shadow-blue-500/30
+                hover:-translate-y-2
+                transition-all duration-300
+              "
+            >
+              {/* Gradient Overlay */}
+              <div
+                className="
+                  absolute inset-0 rounded-3xl opacity-10
+                  bg-gradient-to-br from-blue-500/40 via-transparent to-cyan-500/40
+                "
+              ></div>
 
-              {/* Left Info */}
-              <div className="flex-1 pr-6">
-                <h3 className="text-xl font-semibold text-white">
-                  {edu.degree}
-                </h3>
+              {/* Content */}
+              <div className="relative flex justify-between items-center z-10">
+                {/* Left Info */}
+                <div className="flex-1 pr-6">
+                  <h3 className="text-xl font-semibold text-black">
+                    {edu.degree}
+                  </h3>
 
-                <p className="text-md text-purple-400 font-semibold">
-                  Specialization: {edu.specialization}
-                </p>
+                  <p className="text-md text-blue-600 font-semibold">
+                    Specialization: {edu.specialization}
+                  </p>
 
-                <h4 className="text-md text-gray-300 mt-1">
-                  {edu.school}
-                </h4>
+                  <h4 className="text-md text-gray-800 mt-1">
+                    {edu.school}
+                  </h4>
 
-                <p className="text-sm text-gray-500 mt-1">
-                  {edu.date}
-                </p>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {edu.date}
+                  </p>
 
-                <p className="mt-4 text-gray-400 font-bold">
-                  Grade: {edu.grade}
-                </p>
+                  <p className="mt-4 text-gray-800 font-semibold">
+                    Grade: {edu.grade}
+                  </p>
 
-                <p className="mt-2 text-gray-400">{edu.desc}</p>
+                  <p className="mt-2 text-gray-700">
+                    {edu.desc}
+                  </p>
+                </div>
+
+                {/* Right Image */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={edu.img}
+                    alt={edu.school}
+                    className="rounded-xl object-cover max-h-28 md:max-h-36 lg:max-h-40"
+                  />
+                </div>
               </div>
-
-              {/* Right Image */}
-              <div className="flex-shrink-0">
-                <img
-                  src={edu.img}
-                  alt={edu.school}
-                  className="rounded-lg object-cover max-h-28 md:max-h-36 lg:max-h-40"
-                />
-              </div>
-
             </div>
-          </div>
+          
         ))}
       </div>
-
     </section>
   );
 };

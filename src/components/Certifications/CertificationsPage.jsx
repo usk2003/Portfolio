@@ -60,12 +60,12 @@ const CertificationsPage = () => {
   }));
 
   return (
-    <section className="py-12 px-[6vw] md:px-[8vw] lg:px-[10vw] font-sans">
+    <section className="py-24 px-[6vw] md:px-[8vw] lg:px-[10vw] font-sans">
 
       {/* Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CERTIFICATIONS</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <h2 className="text-4xl font-bold text-black">CERTIFICATIONS</h2>
+        <div className="w-32 h-1 bg-blue-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg">Detailed overview of all my certifications 🎓</p>
       </div>
 
@@ -74,7 +74,7 @@ const CertificationsPage = () => {
         {dataWithImages.map((item, index) => (
           <div
             key={index}
-            className="bg-gray-900 border border-white rounded-2xl p-6 shadow-xl hover:-translate-y-2 hover:shadow-purple-500/30 transition duration-300"
+            className="bg-blue-100/50 border border-blue-600 rounded-2xl p-6 shadow-xl hover:-translate-y-2 hover:shadow-blue-500/30 transition duration-300"
           >
             <img
               src={item.img}
@@ -82,15 +82,14 @@ const CertificationsPage = () => {
               className="w-full h-44 object-cover rounded-lg mb-4"
             />
 
-            <h3 className="text-xl font-semibold text-white mb-1">{item.title}</h3>
-            <p className="text-purple-400 text-sm font-semibold">{item.issuer}</p>
-            <p className="text-gray-400 text-xs mb-4">{item.date}</p>
+            <h3 className="text-xl font-semibold text-black mb-1">{item.title}</h3>
+            <p className="text-blue-800 text-sm font-semibold">{item.issuer}</p>
+            <p className="text-black text-xs mb-4">{item.date}</p>
 
-            <p className="text-gray-300 text-sm mb-4 leading-relaxed">{item.details}</p>
-
+            <p className="text-black text-sm mb-4 leading-relaxed">{item.details}</p>
             <Link
               to={`/certifications/${item.id}`}
-              className="block text-center bg-purple-600 hover:bg-purple-800 text-white py-2 px-4 rounded-lg font-semibold mt-4 transition"
+              className="block text-center bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded-lg font-semibold mt-4 transition"
             >
               View Certificate →
             </Link>

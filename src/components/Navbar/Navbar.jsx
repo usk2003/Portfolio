@@ -18,20 +18,20 @@ const Navbar = () => {
     { id: "academic-highlights", label: "Academic Highlights" },
   ];
 
-  // Detect scroll for navbar blur
+  /* Detect scroll for navbar blur */
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Detect active section (homepage only)
+  /* Detect active section */
   useEffect(() => {
     if (location.pathname !== "/") return;
 
     const sections = [
       ...menuItems.map((item) => document.getElementById(item.id)),
-      document.getElementById("contact"), // Add CONTACT to scroll detection
+      document.getElementById("contact"),
     ];
 
     const handleScroll = () => {
@@ -44,11 +44,7 @@ const Navbar = () => {
         const bottom = top + section.offsetHeight;
 
         if (scrollPos >= top && scrollPos <= bottom) {
-          if (section.id === "contact") {
-            setActiveSection("contact"); // Contact button special highlight
-          } else {
-            setActiveSection(section.id);
-          }
+          setActiveSection(section.id);
         }
       });
     };
@@ -57,86 +53,90 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
 
-  // NAVIGATION HANDLER WITH OFFSET FIX
   const handleMenuItemClick = (item) => {
     setIsOpen(false);
     setActiveSection(item.id);
 
     if (location.pathname === "/") {
       const section = document.getElementById(item.id);
-
       if (section) {
         const navbarHeight = 120;
-        const elementY =
-          section.getBoundingClientRect().top + window.pageYOffset;
-        const offsetY = elementY - navbarHeight;
+        const y =
+          section.getBoundingClientRect().top +
+          window.pageYOffset -
+          navbarHeight;
 
-        window.scrollTo({ top: offsetY, behavior: "smooth" });
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
       return;
     }
 
-    // Navigate from another page
     navigate(`/#${item.id}`);
   };
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[6vw] md:px-[8vw] lg:px-[10vw] ${
-        isScrolled
-          ? "bg-[#050414]/60 backdrop-blur-lg shadow-md"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300
+        px-[6vw] md:px-[8vw] lg:px-[10vw]
+        ${
+          isScrolled
+            ? "bg-white/70 backdrop-blur-xl shadow-sm border-b border-gray-200"
+            : "bg-transparent"
+        }
+      `}
     >
-      <div className="text-white py-5 flex justify-between items-center">
+      <div className="py-5 flex justify-between items-center text-theme">
         {/* Logo */}
         <div
           className="text-lg font-semibold cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <span className="text-[#8245ec]">&lt;</span>
+          <span className="text-accent">&lt;</span>
           Suresh Kumar
-          <span className="text-[#8245ec]">/</span>
+          <span className="text-accent">/</span>
           Urlana
-          <span className="text-[#8245ec]">&gt;</span>
+          <span className="text-accent">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden md:flex space-x-8">
           {menuItems.map((item) => (
-            <li key={item.id} className="relative cursor-pointer group">
+            <li key={item.id} className="relative group">
               <button
                 onClick={() => handleMenuItemClick(item)}
-                className={`${
-                  activeSection === item.id
-                    ? "text-[#8245ec]"
-                    : "text-gray-300"
-                } hover:text-[#8245ec]`}
+                className={`transition
+                  ${
+                    activeSection === item.id
+                      ? "text-accent"
+                      : "text-theme"
+                  }
+                  hover:text-accent
+                `}
               >
                 {item.label}
               </button>
 
-              {/* Purple underline */}
               <span
-                className={`absolute left-0 -bottom-1 h-[2px] bg-[#8245ec] rounded-full transition-all duration-300 
-                ${
-                  activeSection === item.id
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
-                }`}
-              ></span>
+                className={`absolute left-0 -bottom-1 h-[2px] bg-accent rounded-full transition-all duration-300
+                  ${
+                    activeSection === item.id
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                  }
+                `}
+              />
             </li>
           ))}
         </ul>
 
-        {/* Right-side Contact Button */}
+        {/* Contact Button */}
         <button
           onClick={() => handleMenuItemClick({ id: "contact" })}
-          className={`hidden md:block px-5 py-2 rounded-full border backdrop-blur-md transition-all duration-300
+          className={`hidden md:block px-5 py-2 rounded-full border transition-all duration-300
             ${
               activeSection === "contact"
-                ? "bg-[#8245ec] border-[#8245ec] text-white scale-105"
-                : "bg-white/10 border-white/20 text-white hover:bg-white/20 hover:scale-105"
+                ? "bg-blue-300/50 backdrop-blur-xl text-blue-950 font-semibold border-accent scale-105"
+                : "bg-blue-100/50 backdrop-blur-xl text-blue border-gray-300 hover:scale-105"
             }
           `}
         >
@@ -147,12 +147,12 @@ const Navbar = () => {
         <div className="md:hidden">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec]"
+              className="text-3xl text-accent"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec]"
+              className="text-3xl text-accent"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -161,31 +161,34 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414]/80 backdrop-blur-xl rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="absolute top-16 left-1/2 -translate-x-1/2 w-4/5
+          bg-white/80 backdrop-blur-xl rounded-lg shadow-md md:hidden"
+        >
+          <ul className="flex flex-col items-center space-y-4 py-4">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => handleMenuItemClick(item)}
-                  className={`${
-                    activeSection === item.id
-                      ? "text-[#8245ec]"
-                      : "text-gray-200"
-                  } hover:text-white`}
+                  className={`transition
+                    ${
+                      activeSection === item.id
+                        ? "text-accent"
+                        : "text-theme"
+                    }
+                  `}
                 >
                   {item.label}
                 </button>
               </li>
             ))}
 
-            {/* Mobile Contact Button */}
             <button
               onClick={() => handleMenuItemClick({ id: "contact" })}
-              className={`mt-3 px-5 py-2 rounded-full border backdrop-blur-md transition-all duration-300
+              className={`mt-3 px-5 py-2 rounded-full border transition-all duration-300
                 ${
                   activeSection === "contact"
-                    ? "bg-[#8245ec] border-[#8245ec] text-white scale-105"
-                    : "bg-white/10 border-white/20 text-white hover:bg-white/20"
+                    ? "bg-accent text-white border-accent scale-105"
+                    : "bg-white text-theme border-gray-300"
                 }
               `}
             >

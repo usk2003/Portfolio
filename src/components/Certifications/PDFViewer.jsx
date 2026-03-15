@@ -8,7 +8,8 @@ const pdfFiles = {
   nptel_dap: "/certifications/nptel_dap.pdf",
   nptel_pdsa: "/certifications/nptel_pdsa.pdf",
   tableau: "/certifications/internshala_tableau.pdf",
-  si_diamond: "/certifications/si_diamond.pdf"
+  si_diamond: "/certifications/si_diamond.pdf",
+  cv: "/cv.pdf",
 };
 
 // Titles for display
@@ -17,8 +18,8 @@ const pdfTitles = {
   nptel_dap: "NPTEL – Data Analytics using Python",
   nptel_pdsa: "NPTEL – Programming & Data Structures (Python)",
   tableau: "Tableau – Hands-on Training",
-  si_diamond: "Smart Interviews – Diamond Smart Coder"
-
+  si_diamond: "Smart Interviews – Diamond Smart Coder",
+  cv: "Curriculum Vitae — Urlana Suresh Kumar"
 };
 
 const PDFViewer = () => {
@@ -33,7 +34,7 @@ const PDFViewer = () => {
         <h2 className="text-3xl font-bold">Certificate Not Found</h2>
         <Link
           to="/certifications"
-          className="text-purple-400 underline mt-4 block"
+          className="text-blue-400 underline mt-4 block"
         >
           Go Back to Certifications
         </Link>
@@ -45,12 +46,12 @@ const PDFViewer = () => {
     <section className="py-24 px-[6vw] md:px-[8vw] lg:px-[10vw] font-sans">
       {/* Title */}
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-white">{title}</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <h2 className="text-4xl font-bold text-black">{title}</h2>
+        <div className="w-32 h-1 bg-blue-500 mx-auto mt-4"></div>
       </div>
 
       {/* PDF Viewer */}
-      <div className="w-full h-[80vh] bg-black rounded-xl overflow-hidden border border-gray-700 shadow-xl">
+      <div className="w-full aspect-[4/3] bg-black rounded-xl overflow-hidden border border-gray-700 shadow-xl">
         <iframe
           src={pdfSrc}
           title={title}
@@ -60,20 +61,33 @@ const PDFViewer = () => {
 
       {/* Buttons */}
       <div className="mt-10 flex flex-col md:flex-row justify-center gap-6">
-        <Link
-          to="/certifications"
-          className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded-xl text-lg font-semibold text-center"
-        >
-          ← Back to Certifications
-        </Link>
+        {id !== "cv" && (
+          <Link
+            to="/certifications"
+            className="bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded-xl text-lg font-semibold text-center"
+          >
+            ← Back to Certifications
+          </Link>
+        )}
 
         <Link
           to="/"
-          className="bg-purple-600 hover:bg-purple-800 text-white px-8 py-3 rounded-xl text-lg font-semibold text-center"
+          className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl text-lg font-semibold text-center"
         >
-          Return to Main Page →
+          ← Return to Main Page
         </Link>
+        {id === "cv" && (
+          <a
+            href={pdfSrc}
+            download="CV_UrlanaSureshKumar.pdf"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl text-lg font-semibold text-center"
+          >
+            Download CV
+          </a>
+        )}
       </div>
+
+      
     </section>
   );
 };

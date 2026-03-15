@@ -3,168 +3,202 @@ import {
   SiLeetcode,
   SiCodechef,
   SiCodeforces,
-  SiGithub,
-  SiCoder,
-  SiCodeproject,
-  SiCodeium
+  SiCodeium,
+  SiGithub
 } from "react-icons/si";
-import { FaCertificate, FaMedal } from "react-icons/fa";
+import { FaCertificate, FaMedal, FaCode } from "react-icons/fa";
 
 const Highlights = () => {
   return (
     <section
       id="highlights"
-      className="py-24 px-[6vw] md:px-[8vw] lg:px-[10vw] font-sans"
+      className="px-[6vw] md:px-[8vw] lg:px-[10vw] font-sans"
     >
-      {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">ACADEMIC HIGHLIGHTS</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <h2 className="text-4xl font-bold text-black">
+          ACADEMIC HIGHLIGHTS
+        </h2>
+        <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto mt-4 rounded-full" />
       </div>
 
-      {/* GRID → 2×2 Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        {/* ===================== ROW 1 — CODING PROFILES (SPAN 2 COLS) ===================== */}
-        <div className="md:col-span-2 bg-gray-900 border border-white rounded-2xl p-10 shadow-xl">
-          <h3 className="text-3xl font-bold text-white mb-6">Coding Profiles</h3>
-
-          {/* Icons + Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            {/* LeetCode */}
-            <div className="bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-[#ffa116] hover:shadow-[0_0_15px_#ffa116] transition">
-              <div className="flex items-center gap-3">
-                <SiLeetcode className="text-[#ffa116] text-3xl" />
-                <a
-                  href="https://leetcode.com/usk2003"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xl text-white font-semibold hover:underline hover:text-[#ffa116] transition"
-                >
-                  LeetCode →
-                </a>
-
-              </div>
-              <p className="text-gray-400 mt-2">250+ problems</p>
-              <p className="text-gray-400">Top % Rank: —</p>
-            </div>
-
-            {/* CodeChef */}
-            <div className="bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-[#5b3cc4] hover:shadow-[0_0_15px_#5b3cc4] transition">
-              <div className="flex items-center gap-3">
-                <SiCodechef className="text-[#5b3cc4] text-3xl" />
-                {/* CLICKABLE HEADING */}
-                <a
-                  href="https://www.codechef.com/users/usk2003"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xl text-white font-semibold hover:underline hover:text-[#5b3cc4] transition"
-                >
-                  CodeChef →
-                </a>
-              </div>
-              <p className="text-gray-400 mt-2">1539 Rating</p>
-              <p className="text-gray-400">Top 20% Worldwide</p>
-            </div>
-
-            {/* CodeForces */}
-            <div className="bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-[#2f9fff] hover:shadow-[0_0_15px_#2f9fff] transition">
-              <div className="flex items-center gap-3">
-                <SiCodeforces className="text-[#2f9fff] text-3xl" />
-                <a
-                href="https://codeforces.com/profile/usk2003"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl text-white font-semibold hover:underline hover:text-[#2f9fff] transition"
-              >
-                CodeForces →
-              </a>
-              </div>
-              <p className="text-gray-400 mt-2">Beginner</p>
-              <p className="text-gray-400">Improving Daily</p>
-            </div>
-
-            {/* Smart Interviews */}
-            <div className="bg-[#1a1a1a] p-6 rounded-xl shadow-lg border border-[#00eaff] hover:shadow-[0_0_15px_#00eaff] transition">
-              <div className="flex items-center gap-3">
-                <SiCodeium className="text-[#00eaff] text-3xl" />
-                {/* CLICKABLE HEADING */}
-                <a
-                  href="https://smartinterviews.in/profile/usk2003"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xl text-white font-semibold hover:underline hover:text-[#00eaff] transition"
-                >
-                  SI - Hive→
-                </a>
-              </div>
-              <p className="text-gray-400 mt-2">Diamond Coder</p>
-              <p className="text-gray-400">Rank: 1657 / 43000</p>
-            </div>
+        {/* ================= CODING PROFILES ================= */}
+        <div className="p-6 rounded-3xl bg-blue-100/50 backdrop-blur-xl border border-transparent shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_0_25px_rgba(10,61,171,0.3)] flex flex-col h-full">
+          
+          <div className="flex items-center gap-2 mb-4">
+            <FaCode className="text-blue-500 text-2xl" />
+            <h3 className="text-2xl font-bold text-black">
+              Coding Profiles
+            </h3>
           </div>
 
-          {/* Total Problems Solved */}
-          <p className="text-purple-400 font-bold text-center text-xl mt-6">
-            ⭐ 1000+ Coding Problems Solved ⭐
-            
-          </p>
+          <div className="grid gap-4 flex-1">
+            {[
+              {
+                name: "LeetCode",
+                icon: <SiLeetcode className="text-[#ffa116] text-3xl" />,
+                link: "https://leetcode.com/usk2003",
+                value: "1623",
+                label: "Rating",
+                sub: "Top 23%"
+              },
+              {
+                name: "CodeChef",
+                icon: <SiCodechef className="text-black text-3xl" />,
+                link: "https://www.codechef.com/users/usk2003",
+                value: "1539",
+                label: "Rating",
+                sub: "Top 20%"
+              },
+              {
+                name: "CodeForces",
+                icon: <SiCodeforces className="text-[#2f9fff] text-3xl" />,
+                link: "https://codeforces.com/profile/usk2003",
+                value: "976",
+                label: "Rating",
+                sub: "Beginner"
+              },
+              {
+                name: "SI - Hive",
+                icon: <SiCodeium className="text-[#00eaff] text-3xl" />,
+                link: "https://smartinterviews.in/profile/usk2003",
+                value: "2261",
+                label: "Rank",
+                sub: "Diamond Rank"
+              },
 
-          {/* Codolio Button */}
+              /* NEW PROJECTS ITEM */
+              {
+                name: "GitHub",
+                icon: <SiGithub className="text-black text-3xl" />,
+                link: "https://github.com/usk2003",
+                value: "12+",
+                label: "Projects",
+                sub: "AI & Web Projects"
+              }
+            ].map((item) => (
+              <a key={item.name} href={item.link} target="_blank" rel="noreferrer">
+                <div className="p-4 rounded-2xl bg-white backdrop-blur-md hover:shadow-[0_0_18px_rgba(10,61,171,0.3)] transition">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      {item.icon}
+                      <div>
+                        <div className="font-semibold text-black">{item.name}</div>
+                        <div className="text-sm text-gray-500">{item.sub}</div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-end">
+                      <div className="text-xs font-semibold text-gray-500">{item.label}</div>
+                      <div className="text-xl font-bold text-black">{item.value}</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
           <div className="text-center mt-6">
             <a
-              href="https://codolio.com/profile/usk2003"
+              href="https://codolio.com"
               target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 bg-purple-600 hover:bg-purple-800 text-white rounded-xl font-semibold"
+              rel="noreferrer"
+              className="inline-block px-6 py-2 rounded-xl font-semibold border border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white transition"
             >
-              View My Coding Portfolio →
+              Coding Portfolio
             </a>
           </div>
         </div>
 
-        {/* ===================== ROW 2 LEFT — CERTIFICATIONS ===================== */}
-        <div className="bg-gray-900 border border-white rounded-2xl p-10 shadow-xl">
+        {/* ================= CERTIFICATIONS ================= */}
+        <div className="p-6 rounded-3xl bg-blue-100/50 backdrop-blur-xl border border-transparent shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_0_25px_rgba(10,61,171,0.3)] flex flex-col h-full">
+          
           <div className="flex items-center gap-3 mb-4">
-            <FaCertificate className="text-purple-500 text-3xl" />
-            <h3 className="text-2xl font-bold text-white">Certifications</h3>
+            <FaCertificate className="text-blue-500 text-2xl" />
+            <h3 className="text-2xl font-bold text-black">
+              Certifications
+            </h3>
           </div>
 
-          <ul className="text-gray-300 space-y-3">
-            <li>📘 NPTEL – Modern C++</li>
-            <li>📘 NPTEL – Data Analytics using Python</li>
-            <li>📘 NPTEL – Programming & Data Structures (Python)</li>
-            <li>📘 Tableau – Hands-on Training</li>
-            <li>📘 Smart Interviews – Diamond Smart Coder</li>
-          </ul>
+          <div className="grid gap-3 flex-1">
+            {[
+              { issuer: "NPTEL", name: "Modern C++", link: "/certifications/nptel_cpp" },
+              { issuer: "NPTEL", name: "Data Analytics using Python", link: "/certifications/nptel_python" },
+              { issuer: "NPTEL", name: "Programming & DS (Python)", link: "/certifications/nptel_pdsa" },
+              { issuer: "Internshala", name: "Tableau – Hands-on Training", link: "/certifications/tableau" },
+              { issuer: "Smart Interviews", name: "Diamond Coder", link: "/certifications/si_diamond" }
+            ].map((c, i) => (
+              <div
+                key={i}
+                className="p-3 bg-white rounded-lg hover:shadow-[0_0_12px_rgba(10,61,171,0.2)] transition flex items-center gap-4"
+              >
+                
+                <div>
+                  <div className="text-xs text-gray-500 font-semibold">{c.issuer}</div>
+                  <div className="text-black">{c.name}</div>
+                </div>
 
-          {/* Certifications Page Button */}
+                <a
+                  href={c.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="ml-auto text-blue-600 font-semibold text-sm hover:underline"
+                >
+                  View
+                </a>
+
+              </div>
+            ))}
+          </div>
+
           <div className="text-center mt-6">
             <a
               href="/certifications"
-              className="px-8 py-3 bg-purple-600 hover:bg-purple-800 text-white rounded-xl font-semibold"
+              className="inline-block px-6 py-2 rounded-xl font-semibold border border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white transition"
             >
-              View All Certifications →
+              View All Certificates
             </a>
           </div>
         </div>
 
-        {/* ===================== ROW 2 RIGHT — ACHIEVEMENTS ===================== */}
-        <div className="bg-gray-900 border border-white rounded-2xl p-10 shadow-xl">
+        {/* ================= ACHIEVEMENTS ================= */}
+        <div className="p-6 rounded-3xl bg-blue-100/50 backdrop-blur-xl border border-transparent shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-[0_0_25px_rgba(10,61,171,0.3)] flex flex-col h-full">
+          
           <div className="flex items-center gap-3 mb-4">
-            <FaMedal className="text-purple-500 text-3xl" />
-            <h3 className="text-2xl font-bold text-white">Achievements</h3>
+            <FaMedal className="text-blue-500 text-2xl" />
+            <h3 className="text-2xl font-bold text-black">
+              Achievements
+            </h3>
           </div>
 
-          <ul className="text-gray-300 space-y-3">
-            <li>🏆 Solved 100+ LeetCode Hard Problems</li>
-            <li>🏆 CodeChef Top 20% India</li>
-            <li>🏆 39th Rank in GFG VNR Contest</li>
-            <li>🏆 Finalist in 3+ National Hackathons</li>
-            <li>🏆 SSC School Topper</li>
-            <li>🏆 Intermediate 98.2% State Ranker</li>
-          </ul>
+          <div className="grid gap-3 flex-1">
+            {[
+              "CodeChef Top 20%",
+              "Rank 1657 – SI Hive",
+              "39th Rank – GFG VNR Contest",
+              "Finalist in National Hackathons",
+              "SSC School Topper",
+              "Intermediate – 98.2%"
+            ].map((a) => (
+              <div
+                key={a}
+                className="p-3 bg-white rounded-lg text-black hover:shadow-[0_0_12px_rgba(10,61,171,0.2)] transition"
+              >
+                {a}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-6">
+            <a
+              href="/experience"
+              className="inline-block px-6 py-2 rounded-xl font-semibold border border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white transition"
+            >
+              View Responsibilities
+            </a>
+          </div>
         </div>
+
       </div>
     </section>
   );

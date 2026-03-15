@@ -24,6 +24,15 @@ import postmanLogo from './assets/tech_logo/postman.png';
 import figmaLogo from './assets/tech_logo/figma.png';
 import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
+import canvaLogo from './assets/tech_logo/canva.png';
+import adaptability from './assets/tech_logo/adaptability.png';
+import communication from './assets/tech_logo/conversation.png';
+import leadership from './assets/tech_logo/leadership.png';
+import teamwork from './assets/tech_logo/partners.png';
+import time_manage from './assets/tech_logo/time-passing.png';
+import tel from './assets/tech_logo/tel.png';
+import hin from './assets/tech_logo/hin.png';
+import eng from './assets/tech_logo/eng.png';
 
 // ------------------------------------
 // Education Logos
@@ -94,6 +103,23 @@ export const SkillsInfo = [
       { name: 'Postman', logo: postmanLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
+    ],
+  },
+  {
+    title: 'Soft Skills',
+    skills: [
+      { name: 'Communication', logo: communication },
+      { name: 'Teamwork', logo: teamwork },
+      { name: 'Adaptability', logo: adaptability },
+      { name: 'Time Management', logo: time_manage },
+    ],
+  },
+  {
+    title: 'Languages Known',
+    skills: [
+      { name: 'English - Beginner', logo: eng },
+      { name: 'Telugu - Intermediate', logo: tel },
+      { name: 'Hindi - Beginner', logo: hin },
     ],
   },
 ];
@@ -173,7 +199,7 @@ export const projects = [
   // -------------------------
   {
     id: 1,
-    title: "StockTraQ – Stock & IPO Tracking Platform",
+    title: "StockTraQ – An Unified AI Insights Platform",
     type: "web",
     category: "Web Development",
     description:
@@ -186,15 +212,15 @@ export const projects = [
 
   {
     id: 2,
-    title: "Journey Junction – AI Trip Planner",
-    type: "ml",
+    title: "Sanchaari – AI Trip Planner & Budget Planner",
+    type: "web",
     category: "Web Development",
     description:
       "An ML-powered recommender that predicts top destinations and optimizes itineraries.",
     image: journeyLogo,
     tags: ["Python", "Machine Learning", "Pandas", "NumPy"],
-    github: "",
-    colab: "",
+    github: "https://github.com/usk2003/Sanchaari",
+    webapp: "",
   },
   {
     id: 3,
@@ -205,8 +231,8 @@ export const projects = [
       "A responsive website built for Vector Junior College with modern UI, interactive components, and optimized performance.",
     image: vectorjcLogo,
     tags: ["React", "JavaScript", "Tailwind CSS"],
-    github: "",
-    webapp: "",
+    github: "https://github.com/Arya2402/Vector-Academy-2",
+    webapp: "https://www.vectoredu.in/",
   },
   {
     id: 4,
@@ -217,8 +243,8 @@ export const projects = [
       "A modern and responsive website for NSS VNRVJIET featuring event updates, volunteer management, public announcements, and gallery integration.",
     image: nssLogo, // ← add your imported image here
     tags: ["React", "JavaScript", "Tailwind CSS"],
-    github: "",
-    webapp: "",
+    github: "https://github.com/usk2003/NSS_Website",
+    webapp: "https://www.nssvnrvjiet.vercel.app/",
   },
 
   // -------------------------
@@ -233,8 +259,8 @@ export const projects = [
       "An NLP-powered PDF Question Answering tool using Gemini LLM, LangChain and FAISS.",
     image: askmypaperLogo,
     tags: ["Python", "Streamlit", "LangChain", "FAISS", "Gemini API"],
-    github: "",
-    colab: "",
+    github: "https://github.com/usk2003/AskMyPaper",
+    //colab: "",
   },
 
   {
@@ -305,7 +331,7 @@ export const projects = [
   {
     id: 11,
     title: "Real-Time Chat Application",
-    type: "web",
+    type: "other",
     category: "Others",
     description:
       "A secure messaging system using Python sockets with authentication and multi-user communication.",

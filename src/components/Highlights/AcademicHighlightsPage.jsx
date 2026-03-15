@@ -6,7 +6,7 @@ const AcademicHighlightsPage = () => {
   return (
     <section
       id="academic-highlights"
-      className="scroll-mt-32 pt-16 pb-24 min-h-screen"
+      className="scroll-mt-32 pt-16  min-h-screen"
     >
       {/* MAIN PAGE SECTIONS */}
       <Highlights />
