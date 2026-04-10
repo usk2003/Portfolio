@@ -13,12 +13,12 @@ const About = () => {
       <div className="max-w-6xl mx-auto flex flex-col items-center animate-[fadeUp_1s_ease]">
 
         {/* NAME */}
-        <h1 className="text-4xl md:text-5xl font-bold text-inherit leading-tight">
+        <span className="text-4xl md:text-5xl font-bold text-inherit leading-tight">
           Hi, I'm
-        </h1>
+        </span>
 
         {/* Hover gradient name */}
-        <h2
+        <h1
           className="
             text-6xl md:text-7xl font-extrabold mt-3 leading-tight
             text-inherit transition-all duration-500
@@ -27,7 +27,7 @@ const About = () => {
           "
         >
           Suresh Kumar Urlana
-        </h2>
+        </h1>
 
         {/* Typing Effect */}
         <h4 className="text-2xl md:text-3xl font-semibold mt-4">

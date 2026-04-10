@@ -20,7 +20,7 @@ const ProjectsPage = () => {
     <section className="py-20 px-[6vw] md:px-[8vw] lg:px-[10vw]">
       {/* Title */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-theme">ALL PROJECTS</h2>
+        <h1 className="text-4xl font-bold text-theme">ALL PROJECTS</h1>
         <div className="w-32 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
       </div>
 
