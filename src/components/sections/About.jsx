@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ReactTypingEffect from "react-typing-effect";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { SiLeetcode, SiCodechef, SiCodeforces } from "react-icons/si";
+import LiveRatings from "../ui/LiveRatings";
 
 const About = () => {
   return (
@@ -111,6 +112,8 @@ const About = () => {
               <FaEnvelope />
             </a>
           </div>
+
+          <LiveRatings />
         </div>
 
         {/* Coding Portfolio + View CV buttons side by side */}

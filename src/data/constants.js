@@ -205,8 +205,8 @@ export const projects = [
       "A full-stack MERN platform to track stocks, IPO performance, sentiment analysis, and personalized watchlists.",
     image: stocktraqLogo,
     tags: ["MERN", "React", "Node.js", "MongoDB", "Express"],
-    github: "",
-    webapp: "",
+    github: "https://github.com/usk2003/StockTraQ-v2",
+    webapp: "https://stocktraq.vercel.app/",
   },
 
   {
@@ -271,7 +271,7 @@ export const projects = [
       "A gesture-controlled virtual mouse using OpenCV + MediaPipe with high accuracy.",
     image: virtualmouseLogo,
     tags: ["Python", "OpenCV", "MediaPipe", "NumPy"],
-    github: "",
+    github: "https://github.com/usk2003/AI-VirtualMouse",
     colab: "",
   },
   {
@@ -283,7 +283,7 @@ export const projects = [
       "A Python TicTacToe game with a minimax-based AI opponent.",
     image: tictactoeLogo,
     tags: ["Python", "Tkinter", "Minimax", "Game AI"],
-    github: "",
+    github: "https://github.com/usk2003/AI-TicTacToe",
     colab: "",
   },
   {
@@ -295,7 +295,7 @@ export const projects = [
       "Exploratory data analysis and ML predictions for global video game sales trends.",
     image: videogamesLogo,
     tags: ["Python", "EDA", "Scikit-learn", "Pandas"],
-    github: "",
+    github: "https://github.com/usk2003/Video-Game-Sales-Predictor",
     colab: "",
   },
 
@@ -308,7 +308,7 @@ export const projects = [
       "A statistical hypothesis testing study analyzing income distribution patterns.",
     image: incomeLogo,
     tags: ["Python", "Statistics", "Pandas", "Hypothesis Testing"],
-    github: "",
+    github: "https://github.com/usk2003/Income-Testing-Hypothesis",
     colab: "",
   },
 
@@ -321,7 +321,7 @@ export const projects = [
       "A complete data engineering and visualization workflow for multi-year weather trends.",
     image: weatherLogo,
     tags: ["Python", "Pandas", "Matplotlib", "Data Engineering"],
-    github: "",
+    github: "https://github.com/usk2003/Weather-Data-Analysis-in-Szeged",
     colab: "",
   },
   // -------------------------
@@ -336,7 +336,7 @@ export const projects = [
       "A secure messaging system using Python sockets with authentication and multi-user communication.",
     image: chatappLogo,
     tags: ["Python", "Socket Programming", "Tkinter", "TCP/IP"],
-    github: "",
+    github: "https://github.com/usk2003/Real-Time-Chat-Application-Using-TCP-IP",
     webapp: "",
   },
 
@@ -349,7 +349,7 @@ export const projects = [
       "A PowerBI dashboard analyzing causes of flight delays across airports.",
     image: flightdelayLogo,
     tags: ["PowerBI", "Data Visualization"],
-    github: "",
+    github: "https://github.com/usk2003/Flight-Delay-Analysis-Dashboard",
     colab: "",
   },
   
@@ -362,7 +362,7 @@ export const projects = [
       "A Python tool for visualizing suffix trees to understand string algorithms clearly.",
     image: suffixtreeLogo,
     tags: ["Python", "Algorithms", "DSA"],
-    github: "",
+    github: "https://github.com/usk2003/Suffix-Tree-Visualizer",
     colab: "",
   },
 
@@ -375,7 +375,7 @@ export const projects = [
       "A CLI-based telephone directory in C with CRUD operations.",
     image: telephoneLogo,
     tags: ["C", "DSA", "CLI"],
-    github: "",
+    github: "https://github.com/usk2003/Telephone-Directory",
     webapp: "",
   },
 ];
