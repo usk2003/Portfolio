@@ -2,20 +2,20 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
 // Components
-import Navbar from "./components/Navbar/Navbar";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Work from "./components/Work/Work";
-import Education from "./components/Education/Education";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import Navbar from "./components/layout/Navbar";
+import About from "./components/sections/About";
+import Skills from "./components/sections/Skills";
+import Work from "./components/sections/Work";
+import Education from "./components/sections/Education";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/layout/Footer";
 
-import ProjectsPage from "./components/Work/ProjectsPage";
-import CertificationsPage from "./components/Certifications/CertificationsPage";
-import PDFViewer from "./components/Certifications/PDFViewer";
-import AcademicHighlightsPage from "./components/Highlights/AcademicHighlightsPage";
-import ResponsibilityDetail from "./components/Experience/ResponsibilityDetail";
-import MouseGlow from "./components/MouseGlow";
+import ProjectsPage from "./pages/ProjectsPage";
+import CertificationsPage from "./pages/CertificationsPage";
+import PDFViewer from "./pages/PDFViewer";
+import AcademicHighlightsPage from "./pages/AcademicHighlightsPage";
+import ResponsibilityDetail from "./pages/ResponsibilityDetail";
+import MouseGlow from "./components/ui/MouseGlow";
 
 
 // UPDATED SCROLL HANDLER
@@ -54,11 +54,17 @@ const App = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("in-view");
-          else entry.target.classList.remove("in-view");
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          } else {
+            entry.target.classList.remove("in-view");
+          }
         });
       },
-      { threshold: 0.12 }
+      // Using rootMargin compensates for the 20px jump during animation
+      // Top boundary expanded by 100px so it doesn't blink when scrolling up.
+      // Bottom boundary shrunken by 50px so animation triggers a bit later for visual effect.
+      { rootMargin: "100px 0px -50px 0px", threshold: 0 }
     );
 
     const sections = Array.from(document.querySelectorAll("section"));
@@ -76,7 +82,7 @@ const App = () => {
       <div className="relative min-h-screen w-full overflow-hidden">
 
         {/* ------------------- BACKGROUND ------------------- */}
-        <div className="absolute inset-0 -z-10 bg-[#ffffff]">
+        <div className="absolute inset-0 -z-10 bg-theme transition-colors duration-300">
 
           {/* Very Soft Purple Mist */}
           <div
@@ -99,8 +105,9 @@ const App = () => {
           {/* Faint Gray Vignette */}
           <div
             className="
-              absolute inset-0
+              absolute inset-0 pointer-events-none
               bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_70%)]
+              dark:bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.2),transparent_70%)]
             "
           />
         </div>

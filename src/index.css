@@ -19,6 +19,16 @@
   --font-family: 'Poppins', sans-serif;
 }
 
+.dark {
+  --bg-color: #020617;        /* global dark background */
+  --text-color: #f8fafc;      /* light text */
+  --muted-color: #94a3b8;     /* muted dark text */
+  --accent-color: #3b82f6;    /* brighter blue for dark mode */
+  --border-color: #1e293b;    /* slate border */
+  --dark-bg: #000000;         /* deeper dark element background */
+  --on-dark: #f8fafc;         /* text on dark */
+}
+
 /* =================================================
    BASE STYLES
    ================================================= */
